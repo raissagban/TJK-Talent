@@ -1,0 +1,56 @@
+.clients {
+  padding: 40px 20px;
+  background-color: #fdf8f3;
+  text-align: center;
+}
+
+.clients h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.client-grid {
+  display: flex;
+  flex-wrap: wrap;          /* allows wrapping to new lines */
+  justify-content: center;  /* centers the cards */
+  gap: 30px;                /* spacing between cards */
+}
+
+.client-card {
+  width: 220px;             /* base width */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.client-card img {
+  width: 100%;             /* fill card width */
+  height: 250px;           /* fixed height for all images */
+  object-fit: cover;       /* crop to fit without distortion */
+  display: block;
+  border-radius: 4px;
+}
+
+.client-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #111;
+}
+
+.spotlight-link {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.spotlight-link:hover {
+  background-color: #ff6600; /* orange hover */
+}

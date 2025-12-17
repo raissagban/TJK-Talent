@@ -1,0 +1,71 @@
+.contact-page {
+  display: block; /* ensures children stack vertically */
+}
+
+/* Banner fills full width at the top */
+.contact-banner {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  display: block; /* forces banner to be its own row */
+}
+
+.contact-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.contact-banner h1 {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  font-size: 3rem;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+.agent-profile {
+  display: flex;
+  align-items: center;        /* align photo + text vertically */
+  justify-content: center;    /* center the whole group in the middle */
+  gap: 20px;                  /* smaller space between photo and details */
+  padding: 40px;
+  background-color: #fdf8f3;
+  max-width: 700px;           /* keeps content compact */
+  margin: 0 auto;             /* centers the block under the banner */
+}
+
+.agent-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;         /* round circle */
+  overflow: hidden;
+  border: 4px solid #ccc;
+  flex-shrink: 0;             /* prevents shrinking */
+}
+
+.agent-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 90% 10%;    /* keeps face centered */
+}
+
+.agent-details {
+  text-align: left;           /* keeps text neat beside the photo */
+}
+
+.agent-details h2 {
+  font-size: 2.4rem;         /* bigger name */
+  margin-bottom: 15px;
+}
+
+.agent-details p {
+  font-size: 1.4rem;         /* bigger text */
+  margin: 8px 0;
+}
+

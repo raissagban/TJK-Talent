@@ -1,0 +1,231 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fdf8f3; /* soft cream */
+  color: #333;
+}
+
+/* Basic header styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo-section left, nav right */
+  width: 100%;
+}
+
+.nav-links a:hover {
+  color: #ff6600;   /* orange on hover */
+}
+
+.nav-links a:active {
+  color: #833AB4;   /* purple when clicked */
+}
+
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo-section img {
+  width: 80px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.separator {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #333;
+}
+
+.logo-text {
+  font-size: 22px;
+  color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* optional, cleaner spacing */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Burger menu lines */
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Burger animation when active */
+.burger.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.burger.toggle .line2 {
+  opacity: 0;
+}
+
+.burger.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .nav-links.nav-active {
+    display: flex;
+    flex-direction: column;
+    background: #f5f5f5;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* optional shadow */
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.slider-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.slider {
+  max-width: 600px;
+  text-align: center;
+}
+
+/* Hide all slides by default */
+.slide {
+  display: none;
+}
+
+.slide h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.slide p {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.slide.active {
+  display: block; /* show only the active one */
+}
+
+footer { 
+  position: relative; /* keeps it at the bottom */ 
+  bottom: 0; /* aligns to bottom edge */ 
+  width: 100%; /* spans full width */ 
+  background: #f5f5f5; /* REMOVE this */ 
+  text-align: center; /* center the content */ 
+  padding: 15px; 
+  display: flex; /* use flexbox for alignment */ 
+
+  justify-content: center; 
+  align-items: center; 
+  gap: 20px; /* space between icons */ } 
+  
+  footer a { 
+    text-decoration: none; 
+    display: flex; /* keeps icon tight inside anchor */ 
+    align-items: center 
+  } 
+
+    footer img { 
+      display: inline-block; 
+      height: auto; 
+    }
+
+.fa-instagram {
+  font-size: 48px;       /* size of the icon */
+  color: #E1306C;        /* Instagram pink */
+  transition: color 0.3s;
+}
+
+.fa-instagram:hover {
+  color: #833AB4;        /* Instagram purple on hover */
+}
+
+
+.spotlight-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* spacing between icons */
+  padding: 0;
+  background: none;
+}
+
+.spotlight-logo img {
+  width: 48px;           /* adjust size to balance with Instagram */
+  height: auto;
+  object-fit: contain;   /* keeps proportions */
+  background: none;      /* ensure no background on the image */
+}
+
+.spotlight-logo:hover {
+  color: #833AB4;        /* Instagram purple on hover */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* move content higher */
+  height: 100vh;
+  text-align: center;
+  padding-top: 1%; /* adjust spacing from the top */
+}
+
+.dots {
+  margin-top: 2rem;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
